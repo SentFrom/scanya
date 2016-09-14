@@ -1,10 +1,10 @@
-source 'https://rubygems.org'
+# source 'https://rubygems.org'
+source "https://gems.ruby-china.org"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -30,9 +30,36 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# add by chpwang
+gem "active_link_to", github: "xdite/active_link_to", branch: "wrap_tag_css"
+gem "will_paginate"
+gem "ransack"
+gem "bootstrap-sass"
+gem "devise"
+gem "simple_form"
+gem "annotate"
+gem "awesome_rails_console"
+gem "font-awesome-rails"
+gem "mini_magick"
+gem "carrierwave"
+gem "carrierwave-aws"
+gem "figaro"
+gem "aasm"
+gem "acts_as_list"
+gem "seo_helper"
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
+  gem "pry"
+  gem "pry-nav"
+end
+
+group :production do
+  gem "pg"
 end
 
 group :development do
